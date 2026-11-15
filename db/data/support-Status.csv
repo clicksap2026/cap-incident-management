@@ -1,0 +1,6 @@
+code;name;criticality
+N;New;1
+I;In process;2
+H;On hold;2
+R;Resolved;3
+C;Closed;0

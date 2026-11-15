@@ -1,0 +1,13 @@
+ID;title;description;customer_ID;urgency_code;status_code;engineer
+b1000000-0000-4000-8000-000000000001;Washing machine leaks water;Water comes out from the bottom during the rinse cycle.;a1000000-0000-4000-8000-000000000001;H;I;Suresh Patil
+b1000000-0000-4000-8000-000000000002;Fridge is not cooling;The fridge is warm since yesterday. The freezer still works.;a1000000-0000-4000-8000-000000000002;H;N;
+b1000000-0000-4000-8000-000000000003;Microwave makes a loud noise;A humming noise starts after 10 seconds of heating.;a1000000-0000-4000-8000-000000000003;M;I;Deepa Nair
+b1000000-0000-4000-8000-000000000004;Air conditioner remote lost;The customer needs a new remote for the bedroom AC.;a1000000-0000-4000-8000-000000000004;L;R;Suresh Patil
+b1000000-0000-4000-8000-000000000005;Dishwasher shows error E24;The dishwasher stops and shows E24 on the display.;a1000000-0000-4000-8000-000000000005;M;H;Deepa Nair
+b1000000-0000-4000-8000-000000000006;Oven door does not close;The oven door hinge looks bent.;a1000000-0000-4000-8000-000000000006;M;N;
+b1000000-0000-4000-8000-000000000007;Water purifier tastes bad;The water tastes of plastic since the filter change.;a1000000-0000-4000-8000-000000000001;L;C;Anil Joshi
+b1000000-0000-4000-8000-000000000008;Ceiling fan wobbles;The fan shakes at high speed.;a1000000-0000-4000-8000-000000000002;L;N;
+b1000000-0000-4000-8000-000000000009;Geyser does not heat;No hot water. The power light is on.;a1000000-0000-4000-8000-000000000003;H;I;Anil Joshi
+b1000000-0000-4000-8000-000000000010;TV has no sound;The picture is fine but there is no sound on any channel.;a1000000-0000-4000-8000-000000000004;M;R;Suresh Patil
+b1000000-0000-4000-8000-000000000011;Chimney light not working;The light on the kitchen chimney does not switch on.;a1000000-0000-4000-8000-000000000005;L;N;
+b1000000-0000-4000-8000-000000000012;Washing machine will not spin;The drum fills with water but does not spin.;a1000000-0000-4000-8000-000000000006;H;N;

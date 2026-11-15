@@ -1,0 +1,14 @@
+@server = http://localhost:4004
+@svc = {{server}}/odata/v4/incident
+
+### 1. All incidents with their customer, urgency and status
+GET {{svc}}/Incidents?$expand=customer,urgency,status
+
+### 2. High urgency incidents that are still open
+GET {{svc}}/Incidents?$filter=urgency_code eq 'H' and status_code ne 'R' and status_code ne 'C'
+
+### 3. One incident with its conversation
+GET {{svc}}/Incidents(b1000000-0000-4000-8000-000000000001)?$expand=conversation
+
+### 4. One customer with all their incidents
+GET {{svc}}/Customers(a1000000-0000-4000-8000-000000000001)?$expand=incidents

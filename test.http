@@ -12,3 +12,36 @@ GET {{svc}}/Incidents(b1000000-0000-4000-8000-000000000001)?$expand=conversation
 
 ### 4. One customer with all their incidents
 GET {{svc}}/Customers(a1000000-0000-4000-8000-000000000001)?$expand=incidents
+
+### 5. Draft step 1: create a new incident as a draft (like pressing Create)
+# @name draft
+POST {{svc}}/Incidents
+Content-Type: application/json
+
+{ "title": "Fridge door alarm keeps beeping", "customer_ID": "a1000000-0000-4000-8000-000000000004" }
+
+### 6. Draft step 2: change the draft (like typing in the form)
+PATCH {{svc}}/Incidents(ID={{draft.response.body.ID}},IsActiveEntity=false)
+Content-Type: application/json
+
+{ "urgency_code": "L", "engineer": "Deepa Nair" }
+
+### 7. Draft step 3: add a conversation line to the draft
+POST {{svc}}/Incidents(ID={{draft.response.body.ID}},IsActiveEntity=false)/conversation
+Content-Type: application/json
+
+{ "author": "Arjun Mehta", "message": "It beeps even when the door is closed." }
+
+### 8. Draft step 4: activate the draft (like pressing Save)
+POST {{svc}}/Incidents(ID={{draft.response.body.ID}},IsActiveEntity=false)/IncidentService.draftActivate
+Content-Type: application/json
+
+{}
+
+### 9. Read it back: status is New and the message is there
+GET {{svc}}/Incidents(ID={{draft.response.body.ID}},IsActiveEntity=true)?$expand=status,conversation
+
+### 10. Status names in German (localized data). Try en and de.
+GET {{svc}}/Status
+Accept-Language: de
+
